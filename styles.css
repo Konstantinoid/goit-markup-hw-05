@@ -6,7 +6,6 @@ margin: 0 auto;
 }
 img {
 display: block; 
-
 }
 *,
 ::before,
@@ -20,9 +19,7 @@ list-style: none;
 .link {
 text-decoration: none;
 }
-
-                                                  /* HEADER */
-           
+                                                  /* HEADER */          
 .ontainer_one {
 display: flexbox;
 height: 80px;
@@ -208,7 +205,6 @@ height: 16px;
 padding: 0px;
 margin-left: 0px;
 }
-
                                                              /* HERO */
 .container_two {
 width: 1600px;
@@ -264,7 +260,6 @@ color: #F5F4FA;
 width: 200px;
 height: 50px;
 border-radius: 4px;
-
 }
 .button_info {
 margin-left: 250px;
@@ -292,7 +287,6 @@ margin-right: auto;
 list-style: none;
 margin-right: 25px;
 }
-
 .list_one_1stimg::before {
 display: block;
 content: "";
@@ -415,7 +409,6 @@ margin-top: 30px;
 list-style: none;
 align-self: auto;
 }
-
                                              /* SHOWOFF */
 .container_four {
 width: 1600px;
@@ -543,7 +536,7 @@ border-radius: 5%;
 }
                              /* FOOTER */
 .footer {
-background-color:rgba(47, 48, 58, 1); ;
+background-color:rgba(47, 48, 58, 1); 
 display: flex;
 justify-content: start;
 height: 252px;
@@ -748,7 +741,6 @@ width: 1180px;
 margin-left: auto;
 margin-right: auto;
 } 
-
 .Portpholio_background {
 width: 370px;
 height: 404px;
@@ -762,6 +754,40 @@ margin-bottom: 30px;
 padding: 0%;
 margin-right: 30px;
 } 
+.portpholio_image {
+position: relative;
+width: 370px;
+height: 294px;
+}
+.portpholio_image_flex {
+display: block;
+position: absolute;
+background-color: rgba(33, 150, 243, 0.8);
+width: 370px;
+height: 294px;
+opacity: 0;
+top: 100%;
+transition-duration: 250ms;
+}
+.portpholio_image_flex:hover {
+display: block;
+opacity: 1;
+top: 0%;
+}
+.portpholio_flex_text {
+margin-top: 63px;
+margin-left: 24px;
+margin-right: 24px;
+margin-bottom: 63px;
+font-family: Roboto;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 28px;
+letter-spacing: 0.03em;
+text-align: left; 
+color: #FFFFFF;  
+}
 .Portpholio_background:nth-child(3n+0) {
 margin-right: 0px;
 }
