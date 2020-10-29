@@ -767,13 +767,23 @@ width: 370px;
 height: 294px;
 opacity: 0;
 top: 100%;
+transition-delay: 250ms;
 transition-duration: 250ms;
+transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portpholio_image_flex:hover {
-display: block;
 opacity: 1;
+display: block;
 top: 0%;
 }
+.portpholio_image_flex:hover::after {
+content: '';
+position: absolute;
+opacity: 0;
+width: 370px;
+height: 294px;
+}
+
 .portpholio_flex_text {
 margin-top: 63px;
 margin-left: 24px;
