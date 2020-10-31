@@ -48,7 +48,12 @@
         <div class="main_block_container">
           <h1 class="main_block_info">Эффективные решения для вашего бизнеса</h1>
            <div class="button_info">
-            <button type="button" class="button">Заказать услугу</button>
+            <button data-modal-open class="button">Заказать услугу</button>
+            <div data-modal class="backdrop.is-hidden">
+              <div class="modal">
+              <p>asd</p>
+              <button data-modal-close>Close</button>
+            </div>
           </div>
          </div>      
        </section>
@@ -280,5 +285,6 @@
       </div>
       </footer>
     </main>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
