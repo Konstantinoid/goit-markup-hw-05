@@ -598,7 +598,7 @@ margin-top: 0px;
 display: inline-block;
 padding: 0%;
 }       
-.mail_info_displ_footer{
+.mail_info_displ_footer {
 font-family: Roboto;
 font-style: normal;
 font-weight: 500;
@@ -840,9 +840,11 @@ letter-spacing: 0.03em;
 color: #757575;
 margin-left: 24px;
 }   
-.fotter_table {
+.footer_table {
 width: 570px;
 height: 86px;
+margin: 0 auto;
+padding: 0;
 } 
 .footer_table_tagtext {
 width: 219px;
@@ -859,11 +861,15 @@ text-align: left;
 }  
 .footer_input_area {
 display: inline-block;
+outline: none;
 width: 358px;
 height: 50px;
 padding: 10px;
 margin-top: 15px;
-}   
+} 
+.footer_input_area:focus {
+border: 3px solid #2196F3; 
+}  
 .footer_submit_button {
 position: relative;
 display: inline-block;
@@ -895,7 +901,6 @@ content: "";
 padding: 13px;
 background-image: url(./img/svg/icon_send.svg);
 position: absolute;
-right: px;
 top: 12px;
 left: 150px;
 background-size: cover;
@@ -903,7 +908,6 @@ background-repeat: no-repeat;
 background-position: center;
 }
 .popup_text {
-
 margin-top: 40px;
 font-family: Roboto;
 font-style: normal;
@@ -913,13 +917,72 @@ line-height: 23px;
 text-align: center;
 letter-spacing: 0.03em;   
 color: #212121;
+margin-bottom: 20px;
 }
 .popup_form {
 display: block;
 width: 528px;
 margin: 0 auto;
 padding: 0px;
-border: 3px solid tomato;
+}
+.input_area_box {
+position: relative;
+margin-bottom: 20px;
+}
+.popup_svg_name {
+width: 100px;
+height: 100px;
+top: -30%;
+left: 9%;
+padding: 0;
+margin: 0 auto;
+}
+.user_name_svg{
+width: 70px;
+height: 70px;
+position: absolute;
+top: -2px;
+left: 50px;
+fill: black;
+background: transparent;
+
+
+}
+.popup_input_text:focus ~ .user_name_svg {
+display: none;
+}
+
+\.input_area_box:after {
+content: "";
+position: absolute;
+left: 50px;
+bottom: -27px;
+width: 50px;
+height: 50px;
+background-repeat: no-repeat;
+background-image: url(./img/svg/letter.svg);
+}
+
+.popup_input_lable_float {
+position: absolute;
+top: 35%;
+left: 15%;
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 12px;
+line-height: 14px;
+letter-spacing: 0.01em;
+color: #757575;
+transition: transform 250ms liner;
+}
+.popup_input_text:focus +.popup_input_lable_float,
+.popup_input_text:not(:placeholder-shown) + .popup_input_lable_float {
+color: #2196F3;
+transform: translateY(-30px) translateX(-38px);
+}
+.input_area_box:after:hover {
+color: lawngreen;
 }
 .popup_input_lable {
 margin-left: 40px;
@@ -939,18 +1002,17 @@ display: block;
 width: 448px;
 height: 40px;
 padding: 10px;
+padding-left: 30px;
 border: 1px solid rgba(33, 33, 33, 0.2);
 box-sizing: border-box;
 border-radius: 4px;
+margin-bottom: 20px;
 }
 .popup_input_text:focus:valid:not(:placeholder-shown) {
 border: 3px solid #2196F3;
 }
 .popup_input_text:focus:invalid:not(:placeholder-shown) {
 border: 3px solid  red ;
-}
-.popup_input_text:not(:last-child) {
-margin-bottom: 10px;
 }
 .popup_textarea {
 margin-left: 40px;
@@ -996,6 +1058,7 @@ outline: none;
 border-color: #212121;
 margin-left: 50px;
 }
+
 .popup_agreement {
 white-space: nowrap;
 display: inline-block;
@@ -1029,3 +1092,35 @@ color: #2196F3;
 padding: 0px;
 margin: 0 auto;
 }
+.popup_close_button_container {
+position: relative;
+width: 30px;
+height: 30px;
+padding: 0;
+margin: 0 auto;
+display: block;
+}
+.popup_close_button {
+width: 30px;
+height: 30px;
+background: transparent;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 50%;
+outline: none;
+}
+.close_button_svg {
+position: absolute;
+width: 125px;
+height: 125px;
+padding: 0;
+top: -31px;
+left: -5px;
+}
+.close_button_svg:hover {
+fill:#2196F3;
+
+}
+
+
+
+
