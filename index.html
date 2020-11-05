@@ -48,11 +48,39 @@
         <div class="main_block_container">
           <h1 class="main_block_info">Эффективные решения для вашего бизнеса</h1>
            <div class="button_info">
-            <button data-modal-open class="button">Заказать услугу</button>
-            <div data-modal class="backdrop.is-hidden">
-              <div class="modal">
-              <p>asd</p>
-              <button data-modal-close>Close</button>
+            <button id=modalBtn data-modal-open class="button">Заказать услугу</button>
+            <div id=simpleModal data-modal class="popup_body_CSS">
+              <form action="#" method="GET" class="popup_form">
+               <span id="closeBtn" data-modal-close class="popup_close_button_container">&times;</span>
+                <h2 class="popup_text">Оставьте свои данные, мы вам перезвоним</h2>
+                <div class="input_area_box">     
+                <input type="name" class="popup_input_text" name="user_name" placeholder=" " required></input>
+                <label type="name" class="popup_input_lable_float">Имя</label>  
+                <span><svg class="user_name_svg"><use href="./img/svg/sprite.svg#name_popup"></use></svg></span>
+               </div>
+                <div class="input_area_box">
+                <input type="tel" class="popup_input_text" name="user_tel" placeholder=" " pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" required></input>
+                <label type="tel" class="popup_input_lable_float">Телефон</label>
+                <span><svg class="user_name_svg"><use href="./img/svg/sprite.svg#phone_popup"></use></svg></span>
+               </div>
+                <div class="input_area_box">
+                <input type="email"  class="popup_input_text" name="use_email" placeholder=" " required></input>
+                <lable type="email" class="popup_input_lable_float">Почта</lable>
+                <span><svg class="user_name_svg"><use href="./img/svg/sprite.svg#letter_popup"></use></svg></span>
+               </div>
+                <label type="comments" class="popup_input_lable">Комментарии</label>
+                <textarea name="user_massage" class="popup_textarea" placeholder="Введите текст" minlength="10" maxlength="300" ></textarea>   
+                <input type="checkbox" name="agreement_check" class="agreement_checkbox" required></input>
+                <div class="popup_agreement">      
+                 <p class="agreement_text">Соглашаюсь с рассылкой и принимаю</p>
+                  <a class="agreement_ref" href="">Условия договора</a></div>
+                  <div class="popup_submit_container">
+                <button type="submit" class="popup_submit_button"><span  class="popup_button_text">Отправить</span></button>
+               </div>
+               <svg class="close_button_svg">
+                 <use href="./img/svg/sprite.svg#button_close"></use></svg>
+              </form> 
+             </div>
             </div>
           </div>
          </div>      
@@ -279,12 +307,16 @@
                 <a class="footer_social_icons_linked" href=""></a>
               </li>
             </ul>
-            </div>
-          </div>
+            </div>         
         </address>
-      </div>
+        <form action="#" method="GET" class="footer_table">
+          <h2 class="footer_table_tagtext">Подпишитесь на рассылку</h2>
+            <lable for="email"></lable>
+            <input  type="email" name="email" class="footer_input_area" type="text" placeholder="E-mail">
+            <button class="footer_submit_button" type="submit"><span class="footer_button_text">Подписаться</span></button> 
+        </form>
       </footer>
     </main>
-    <script src="./js/modal.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

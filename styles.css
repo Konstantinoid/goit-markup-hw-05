@@ -3,6 +3,7 @@ font-family: 'Roboto', sans-serif;
 font-style: normal;
 max-width: 1600px;
 margin: 0 auto;
+background-color: #E5E5E5;
 }
 img {
 display: block; 
@@ -285,6 +286,7 @@ background-color: rgba(0, 0, 0, 0.05)
 width: 1600px;
 height: 769px;
 margin: 0 auto;
+background-color: #ffffff;
 } 
 .main_info_align {
 width: 1170px;
@@ -369,6 +371,9 @@ color: #757575;
 height: 75px;
 width: 270px;   
 }  
+.image_box_one{
+background-color: #ffffff;
+}
 .main_info_dscr {
 font-family: Roboto;
 font-style: normal;
@@ -518,9 +523,9 @@ margin-top: 10px;
 .coda {
 display: block;
 height: 370px;
+background-color: #ffffff;
 }
 .main_info_dscr_coda {
-margin-top: 94px;
 margin-left: auto;
 margin-right: auto;
 font-family: Roboto;
@@ -529,8 +534,10 @@ font-style: normal;
 font-weight: 700;
 line-height: 42px;
 letter-spacing: 0.03em;
+padding-top: 94px;
 display: flex;
 justify-content: space-evenly;
+background-color: #ffffff;
 }
 .coda_list {
 display: flex;
@@ -541,6 +548,7 @@ margin-right: auto;
 margin-top: 50px;
 margin-bottom: 94px;
 list-style: none;
+
 }
 .coda_partners_svg {
 width: 170px;
@@ -703,8 +711,8 @@ background-repeat: no-repeat;
 background-position: center;
 }
                                             /* Portpholio */
-.Portpholio_main_block {
-display: block;
+.Portpholio_CSS{
+background-color: #ffffff;
 }  
 .button_portpholio {
 height: 38px;
@@ -843,7 +851,8 @@ margin-left: 24px;
 .footer_table {
 width: 570px;
 height: 86px;
-margin: 0 auto;
+margin-top: 72px;
+margin-left: 93px;
 padding: 0;
 } 
 .footer_table_tagtext {
@@ -856,16 +865,20 @@ font-size: 14px;
 font-style: normal;
 font-weight: 700;
 line-height: 16px;
+color: rgba(255,255,255,1);
 letter-spacing: 0.03em;
 text-align: left;
 }  
 .footer_input_area {
 display: inline-block;
 outline: none;
+border: 1px solid rgba(255, 255, 255, 0.3);;
 width: 358px;
 height: 50px;
 padding: 10px;
 margin-top: 15px;
+background-color: transparent;
+color: rgba(255,255,255,1);
 } 
 .footer_input_area:focus {
 border: 3px solid #2196F3; 
@@ -907,8 +920,13 @@ background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
 }
+                                            /* Popup */ 
+.popup_body_CSS {
+background-color: rgba(0,0,0,0.3);
+display: block;
+}
 .popup_text {
-margin-top: 40px;
+padding-top: 20px;
 font-family: Roboto;
 font-style: normal;
 font-weight: bold;
@@ -919,50 +937,29 @@ letter-spacing: 0.03em;
 color: #212121;
 margin-bottom: 20px;
 }
+
 .popup_form {
 display: block;
 width: 528px;
 margin: 0 auto;
 padding: 0px;
+border-radius: 4px;
+background-color: #ffffff;
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
 }
 .input_area_box {
 position: relative;
 margin-bottom: 20px;
 }
-.popup_svg_name {
-width: 100px;
-height: 100px;
-top: -30%;
-left: 9%;
-padding: 0;
-margin: 0 auto;
-}
 .user_name_svg{
+position: absolute;
 width: 70px;
 height: 70px;
 position: absolute;
 top: -2px;
 left: 50px;
-fill: black;
-background: transparent;
-
-
 }
-.popup_input_text:focus ~ .user_name_svg {
-display: none;
-}
-
-\.input_area_box:after {
-content: "";
-position: absolute;
-left: 50px;
-bottom: -27px;
-width: 50px;
-height: 50px;
-background-repeat: no-repeat;
-background-image: url(./img/svg/letter.svg);
-}
-
 .popup_input_lable_float {
 position: absolute;
 top: 35%;
@@ -980,9 +977,6 @@ transition: transform 250ms liner;
 .popup_input_text:not(:placeholder-shown) + .popup_input_lable_float {
 color: #2196F3;
 transform: translateY(-30px) translateX(-38px);
-}
-.input_area_box:after:hover {
-color: lawngreen;
 }
 .popup_input_lable {
 margin-left: 40px;
@@ -1029,12 +1023,14 @@ resize: none;
 .popup_textarea:focus {
 border: solid 3px #2196F3 ;
 }
+.popup_submit_container {
+padding-bottom: 40px;
+}
 .popup_submit_button {
 display: block;
 width: 200px;
 height: 50px;
 margin-left: 164px;
-margin-bottom: 40px;
 margin-top: 30px;
 background: #2196F3;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -1058,7 +1054,6 @@ outline: none;
 border-color: #212121;
 margin-left: 50px;
 }
-
 .popup_agreement {
 white-space: nowrap;
 display: inline-block;
@@ -1093,12 +1088,20 @@ padding: 0px;
 margin: 0 auto;
 }
 .popup_close_button_container {
-position: relative;
-width: 30px;
-height: 30px;
-padding: 0;
-margin: 0 auto;
-display: block;
+width: 20px;
+height: 20px;
+float: right;
+padding: 4px;
+margin-top: 8px;
+margin-right: 8px;
+font-size: 20px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 10px;
+line-height: 10px;
+}
+.popup_close_button_container:focus,.popup_close_button_container:hover {
+color: #2196F3; 
+cursor: pointer;
 }
 .popup_close_button {
 width: 30px;
@@ -1110,16 +1113,16 @@ outline: none;
 }
 .close_button_svg {
 position: absolute;
-width: 125px;
-height: 125px;
+width: 80px;
+height: 80px;
 padding: 0;
-top: -31px;
-left: -5px;
+top: -7px;
+left: 2px;
 }
 .close_button_svg:hover {
 fill:#2196F3;
-
 }
+
 
 
 

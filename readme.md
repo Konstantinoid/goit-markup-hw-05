@@ -1,2 +1,2 @@
 # Homework 6
-1st attempt on homework 6
+2тв attempt on homework 6
